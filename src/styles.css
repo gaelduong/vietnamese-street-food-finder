@@ -1,0 +1,228 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+}
+
+.App{
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.About{
+  text-align: left;
+}
+
+.Lang{
+  margin-top: 1rem;
+}
+
+.Note{
+  width:70vw;
+  background: #eee9aa;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+.NoteContainer{
+  display:flex;
+  justify-content: center;
+}
+
+.FoodContainer{
+  display:flex;
+  width:100%;
+  flex-wrap: wrap;
+}
+
+span{
+  display:block;
+  text-align: left;
+}
+
+.Filter{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Filter > * {
+  margin: 2px;
+}
+
+input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 12px;
+  background-color: white;
+  /* background-image: url('public/search_icon.png'); */
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 5px 100px 5px 5px;
+  margin-bottom:5px;
+}
+.select-css {
+	/* display: block; */
+	font-size: 12px;
+	font-family: sans-serif;
+	font-weight: bold;
+	color: #444;
+	line-height: 1.25;
+  /* padding: .6em 1.4em .5em .8em; */
+  padding: 5px 10px 5px 5px;
+  
+	width: 50%;
+	max-width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	border-radius: .5em;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+	  linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+	background-size: .65em auto, 100%;
+}
+.select-css::-ms-expand {
+	display: none;
+}
+.select-css:hover {
+	border-color: #888;
+}
+.select-css:focus {
+	border-color: #aaa;
+	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+	box-shadow: 0 0 0 3px -moz-mac-focusring;
+	color: #222;
+	outline: none;
+}
+.select-css option {
+	font-weight:normal;
+}
+.District, .FoodType{
+  /* display: inline-block; */
+  padding: 5px 10px;
+  margin:3px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.Card{
+  /* height: 50vh; */
+  line-height: 2.5ex;
+  height: 50ex;
+  font-size:15px;
+  /* border: 2px solid blue; */
+  display:inline-block;
+  /* margin: 0 20px; */
+  margin: 2%;
+  flex-grow:0;
+  flex:0 0 calc(25% - 4%);
+}
+
+.Image{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 50%;
+}
+
+.Details{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #f5f5f5;
+  overflow:scroll;
+  height: 50%;
+}
+
+.Image{
+  width:100%;
+}
+
+.GetDirection{
+  display: inline-block;
+  padding: 7px 5px;
+  margin-bottom:2px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color:#6f7ac7;
+  border: none;
+  border-radius: 3px;
+	box-shadow: 2px 2px rgba(59, 153, 252, .5);
+
+}
+
+.GetDirection:hover {background-color: #06979c}
+.GetDirection:active {
+  background-color: #3F50B5;
+  transform: translateY(2px);
+}
+
+/* Small screen - Portrait */
+@media only screen and (max-width:600px){
+  .Card{
+    flex:0 0 calc(50% - 4%);
+    font-size:12px;
+  }
+}
+
+/* Small screen - Landscape */
+@media only screen and (max-width:700px){
+  .Card{
+    flex:0 0 calc(50% - 4%);
+  }
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: rgb(76, 102, 175);}
+ul.topnav li Link:active{
+  background-color: rgb(76, 102, 175);
+}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
